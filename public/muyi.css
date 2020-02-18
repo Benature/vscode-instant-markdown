@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+}
+
+.note {
+    border-top-color: rgb(238, 227, 207);
+    border-right-color: rgb(238, 227, 207);
+    border-bottom-color: rgb(238, 227, 207);
+    border-left-color: rgb(238, 227, 207);
+
+    margin-bottom: 20px;
+    padding: 15px;
+    position: relative;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+
+}
+.note p{
+    margin-bottom:0;
+}
+.b-green {
+    border-left-color: #5cb85c;
+}
+.b-blue {
+    border-left-color: #428bca;
+}

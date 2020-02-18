@@ -1,5 +1,6 @@
 "use strict";
 const vscode = require("vscode");
+var express = require("express");
 const path = require("path");
 const fs = require("fs");
 class Server {
@@ -17,6 +18,12 @@ class Server {
         });
         app.get('/github-highlight.css', function (req, res) {
             res.sendfile(path.resolve(__dirname, '..', '..', 'node_modules', 'highlight.js', 'styles', 'github.css'));
+        });
+        app.get('/muyi.css', function (req, res) {
+            res.sendfile(path.resolve(__dirname, '..', '..', 'public', 'muyi.css'));
+        });
+        app.get('/bootstrap.min.css', function (req, res) {
+            res.sendfile(path.resolve(__dirname, '..', '..', 'public', 'bootstrap', 'bootstrap.min.css'));
         });
         app.get('*', function (req, res) {
             let file = path.resolve(path.join(options.root, req.url));
